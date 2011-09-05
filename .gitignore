@@ -7,3 +7,5 @@ config/settings/production.yml
 public/img/.DS_Store
 
 public/.DS_Store
+
+public/blob.css
