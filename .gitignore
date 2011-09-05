@@ -3,3 +3,7 @@ log/*
 lib/deploy.rb
 config/settings/development.yml
 config/settings/production.yml
+
+public/img/.DS_Store
+
+public/.DS_Store
