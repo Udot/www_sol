@@ -1,0 +1,67 @@
+!!! XML
+!!! 1.1
+%html(xmlns="http://www.w3.org/1999/xhtml")
+  %head
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8" )
+    %meta(http-equiv="expires" content="0" )
+    %meta(http-equiv="Content-Script-Type" content="text/javascript" )
+    %meta(http-equiv="Content-Style-Type" content="text/css" )
+    %meta(http-equiv="X-UA-Compatible" content="IE=8")
+    %meta(name="author" content="MyAppAuthor")
+    %link(rel="icon" type="image/png" href="/favicon.png")
+    %title Sol, an open source hosting platform for Ruby apps
+    %link(type="text/css" rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css")
+    %link(type="text/css" rel="stylesheet" href="/css/style.css")
+    %link(type="text/css" href='http://fonts.googleapis.com/css?family=Montez|Josefin+Sans' rel='stylesheet')
+    %link(type="text/css" rel="stylesheet" href="/css/landing.css")
+    %script(type="text/javascript" src="/js/jquery.js")
+    %script(type="text/javascript" src="/js/bootstrap.js")
+    %script(type="text/javascript" src="/js/application.js")
+  %body{id:@action}
+    %div.topbar-wrapper{:style => "z-index: 5;"}
+      %div.topbar
+        %div.fill
+          %div.container
+            %h3.main_title
+              %a{:href => "/"} Sol
+            %ul
+              - if (@active == "root")
+                %li.active
+                  %a{:href => "/"} Home
+                %li
+                  %a{:href => "/about"} About
+                %li
+                  %a{:href => "/contact"} Contact
+              - elsif (@active == "about")
+                %li
+                  %a{:href => "/"} Home
+                %li.active
+                  %a{:href => "/about"} About
+                %li
+                  %a{:href => "/contact"} Contact
+              - elsif (@active == "contact")
+                %li
+                  %a{:href => "/"} Home
+                %li
+                  %a{:href => "/about"} About
+                %li.active
+                  %a{:href => "/contact"} Contact
+
+    %div.container-fluid
+      %div.sidebar
+      %div.content
+        - if flash[:error]
+          %div.alert-message.error
+            %a.close{:href => "#"} &times;
+            %p
+              %strong Error
+              = flash[:error]
+        - if flash[:notice]
+          %div.alert-message.success
+            %a.close{:href => "#"} &times;
+            %p= flash[notice]
+        - if flash[:warning]
+          %div.alert-message.warning
+            %a.close{:href => "#"} &times;
+            %p= flash[:warning]
+        = yield

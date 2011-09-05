@@ -1,0 +1,27 @@
+div.content {
+	margin-top: 60px;
+}
+
+div.clear { clear: both;}
+
+table.user_info {
+	padding: 10px;
+	width: 200px;
+}
+
+td.data_name {
+	background: #8B8F8B;
+	font-weight: bold;
+	color: #FFF;
+}
+td.data {
+}
+
+td.error {
+	font-weight: bold;
+	color: #B63535;
+}
+
+span.secret {
+	display: none;
+}

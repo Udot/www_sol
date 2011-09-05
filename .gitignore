@@ -1,0 +1,5 @@
+bundler/*
+log/*
+lib/deploy.rb
+config/settings/development.yml
+config/settings/production.yml
