@@ -25,3 +25,8 @@ td.error {
 span.secret {
 	display: none;
 }
+
+/* resizing default topbar menu item size */
+div.topbar li {
+	font-size: 12pt;
+}
