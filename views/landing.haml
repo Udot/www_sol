@@ -8,14 +8,24 @@
   %div.span12.columns.offset2
     %p
       %strong Sol
-      is designed to be a manageable, modular, hosting platform for Ruby apps. It provides a web interface to create, scale, and monitor your Ruby apps, a git entry point to push your code, a chef repository to handle server bootstrapping and configuration management, ruby app packaging and deployment, and a centralised logging service.
+      is designed to be a manageable, modular, hosting platform for Ruby apps. It
+      provides a web interface to create, scale, and monitor your Ruby apps, a git
+      entry point to push your code, a chef repository to handle server bootstrapping
+      and configuration management, ruby app packaging and deployment, and a
+      centralised logging service.
+
     %p
       The main idea is that, sometimes,
       %em PaaS
-      is not the tool for your needs. Sometimes you need tighter control of the data, or cost, or you have some servers idling in a bay, ... The truth is, setting up and managing a hosting environment is a lot of work.  But when you do have the knowledge and requirements to do so, then it's handy to have empowering tools.
+      is not the tool for your needs. Sometimes you need tighter control of the data,
+      or cost, or you have some servers idling in a bay, ... The truth is, setting up
+      and managing a hosting environment is a lot of work.  But when you do have the
+      knowledge and requirements to do so, then it's handy to have empowering tools.
+
     %p
       %strong Sol
-      is in an early stage of development and testing. Yet, some modules have already been published on the
+      is in an early stage of development and testing. Yet, some modules have
+      already been published on the
       %a{:href => "http://github.com/Udot"} github
       project page. More will be released as development, testing and deployment continue.
 
@@ -24,30 +34,45 @@
     %h2 Chef
     %p
       %a{:href => "http://www.opscode.com/chef/"} Chef
-      is one of two big integration frameworks written in Ruby. It is a handy tool to setup and manage sets of servers. Thus, it is a
+      is one of two big integration frameworks written in Ruby. It is a handy
+      tool to setup and manage sets of servers. Thus, it is a
       %em defacto
       requisite for a proper hosting platform.
+
     %h2 OpenSource
-    %p We believe FOSS is the way to build secure, sustainable, and innovative tools. That's why the entire platform will be released under open source licenses (MIT, GPL, or Apache depending on the modules).
+    %p
+      We believe FOSS is the way to build secure, sustainable, and innovative
+      tools. That's why the entire platform will be released under open source
+      licenses (MIT, GPL, or Apache depending on the modules).
 
     %h2 Decentralized
     %p
       A big node is easy to crash, that's why
       %strong Sol
-      is composed of small modules which may be hosted on different servers. Each module performs one task then passes control to the next. This also ensures easier code review, maintenance and evolution.
+      is composed of small modules which may be hosted on different servers.
+      Each module performs one task then passes control to the next. This also
+      ensures easier code review, maintenance and evolution.
 
   %div.span6.columns
     %h2 Linux
-    %p Debian GNU/Linux is one of the most stable open source OS platforms available. Although it has been chosen as the primary platform for the architecture, support for more GNU/Linux or BSD distributions will be encouraged.  
+    %p
+      Debian GNU/Linux is one of the most stable open source OS platforms
+      available. Although it has been chosen as the primary platform for the
+      architecture, support for more GNU/Linux or BSD distributions will be
+      encouraged.
 
     %h2 U
     %p
-      The cloud brings flexibility and ease to app deployment, yet we think this should not come with greater risk to data belonging to you and your clients. That's why Sol uses cloud infrastructure (
+      The cloud brings flexibility and ease to app deployment, yet we think
+      this should not come with greater risk to data belonging to you and your
+      clients. That's why Sol uses cloud infrastructure (
       %em only RackSpace at the moment
-      ), but only for the hosting environment. The other componenets (database, cache, webservers, load balancers, ...) are provided by the
+      ), but only for the hosting environment. The other componenets (database,
+      cache, webservers, load balancers, ...) are provided by the
       %strong Sol platform.
-      In this age of devops and polyglot developers, we think that we can take the time to manage properly our platform. That way, you remain in control.
-
+      In this age of devops and polyglot developers, we think that we can take
+      the time to manage properly our platform. That way, you remain in
+      control.
 
 %div.row
   %div.span12.columns.offset2
