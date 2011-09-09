@@ -9,21 +9,24 @@
 %div.row
   %div.span16.columns
     %h3 Chef
-    %p Chef provides an easy way to build and maintain the hosts that power a
-    Sol infrastructure. It is the way we create and deploy both the modules
-    environment and the modules themselves. Publishing our entire cookbook will
-    probably take some time, but undoubtly it will be done. With the cookbook
-    will also come packaging scripts for modules such as harry, cuddy, pinpin
-    and jupiler (using FPM based scripts).
+    %p
+      Chef provides an easy way to build and maintain the hosts that power a
+      Sol infrastructure. It is the way we create and deploy both the modules
+      environment and the modules themselves. Publishing our entire cookbook will
+      probably take some time, but undoubtly it will be done. With the cookbook
+      will also come packaging scripts for modules such as harry, cuddy, pinpin
+      and jupiler (using FPM based scripts).
 
-    %p I'm not a chef master and I don't know Puppet.  A friend of mine who
-    knows both explained Chef might be the tool for me, so I tried and it works
-    so I stuck with it. Yet, Chef is only used here to build up the
-    infrastructure, so Puppet or another tool would do if you know what you are
-    doing.
+    %p
+      I'm not a chef master and I don't know Puppet.  A friend of mine who
+      knows both explained Chef might be the tool for me, so I tried and it works
+      so I stuck with it. Yet, Chef is only used here to build up the
+      infrastructure, so Puppet or another tool would do if you know what you are
+      doing.
 
-    %p The code to spawn servers is not here yet, so can't tell how much
-    linked to Chef it will be. But soon, very soon, I will be.
+    %p
+      The code to spawn servers is not here yet, so can't tell how much
+      linked to Chef it will be. But soon, very soon, I will be.
 
 %div.row
   %div.span16.columns
@@ -31,35 +34,44 @@
     %p Sol is split in several modules :
 
     %h4 harry
-    %p Harry is the back office app builder. It packages the back office apps
-    (mercury, and the main app) and readies them for deployment. It is not using
-    bundler to manage dependencies because it calls bundler to prepare the apps'
-    dependencies when packaging. For that Harry relies on the user RVM environment.
-    Harry is not production ready, it's mainly used to build the back office stuff
-    at the moment.
+    %p
+      Harry is the back office app builder. It packages the back office apps
+      (mercury, and the main app) and readies them for deployment. It is not using
+      bundler to manage dependencies because it calls bundler to prepare the apps'
+      dependencies when packaging. For that Harry relies on the user RVM environment.
+      Harry is not production ready, it's mainly used to build the back office stuff
+      at the moment.
 
     %h4 cuddy
-    %p Cuddy is the deployer module, at the moment only the backoffice works.
-    As with Harry, Cuddy relies on the user RVM environment since it starts up
-    the apps using bundler. Each hosting node must have one instance of cuddy
-    running.  Each Cuddy instance has a unique token allowing it to have a
-    dedicated queue in the Redis server. Cuddy needs to be built as a package
-    and deployed into your modules as such.
+    %p
+      Cuddy is the deployer module, at the moment only the backoffice works.
+      As with Harry, Cuddy relies on the user RVM environment since it starts up
+      the apps using bundler. Each hosting node must have one instance of cuddy
+      running.  Each Cuddy instance has a unique token allowing it to have a
+      dedicated queue in the Redis server. Cuddy needs to be built as a package
+      and deployed into your modules as such.
 
     %h4 mercury
-    %p Mercury creates, checks, and destroys git repositories and deploys SSH
-    keys when needed. It's a Sinatra app and relies on bundler. It is called by
-    the main app.  Mercury and jupiler must be on the same node.
+    %p
+      Mercury creates, checks, and destroys git repositories and deploys SSH
+      keys when needed. It's a Sinatra app and relies on bundler. It is called by
+      the main app.  Mercury and jupiler must be on the same node.
 
     %h4 pinpin
     %p Pinpin is an app builder and packager.
 
     %h4 jupiler
-    %p Jupiler is the git entry point, it's the gatekeeper controlling repo access.
-    It is ruby app and relies on bundler for its dependencies. It also relies on
-    the main app to know if a user (using an SSH key) is permitted to push to a
-    repository. Like cuddy, it must be packaged.
+    %p
+      Jupiler is the git entry point, it's the gatekeeper controlling repo access.
+      It is ruby app and relies on bundler for its dependencies. It also relies on
+      the main app to know if a user (using an SSH key) is permitted to push to a
+      repository. Like cuddy, it must be packaged.
 
+    %h4 glaucus
+    %p
+      Glaucus is the Rackspace spawner module, it's the one who creates servers at
+      Rackspace when the "add server" button is hit. It uses Fog to create the server
+      then moves on using Net::SSH to bootstrap it with the proper packages.
 
 %div.row
   %div.span16.columns
