@@ -92,13 +92,13 @@
         %a{:href => "http://udot.tenderapp.com/"} tender
 
 %div.row
-  %div.span16.columns
+  %div.span12.columns.offset2
     %h2 People
     %p
       Here is a list of people involved in the project :
 %div.row
   - size = @members.size
-  %div.span4.columns.offset1
+  %div.span4.columns.offset2
     %ul
       - @members[0..(size/3)].each do |dev|
         %li.members
