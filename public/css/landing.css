@@ -51,3 +51,11 @@ strong {
 	font-size: 14pt;
 	line-height: 1.2em;
 }
+
+li.members {
+	list-style:none;
+	margin-bottom: 10px;
+}
+li.members img {
+	vertical-align: middle;
+}

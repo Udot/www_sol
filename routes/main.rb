@@ -8,6 +8,7 @@ class MyApp < Sinatra::Application
   end
 
   get "/about" do
+    @members = GitHub.pull_requests_people("Udot")
     @active = "about"
     haml :about
   end

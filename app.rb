@@ -51,4 +51,5 @@ end
 
 #require_relative 'helpers/init'
 #require_relative 'models/init'
+require_relative 'lib/github_api'
 require_relative 'routes/main'
