@@ -92,34 +92,3 @@
     %p
       The main hub will, mainly, be a dashboard to manage SSH keys and apps :
       create, destroy, monitor node status, scale an app up or down, etc ...
-
-%div.row
-  %div.span16.columns
-    %h2 People
-    %p
-      Here is a list of people involved in the project :
-%div.row
-  - size = @members.size
-  %div.span4.columns.offset1
-    %ul
-      - @members[0..(size/3)].each do |dev|
-        %li.members
-          %a{:href => "https://github.com/#{dev['login']}"}
-            %img{:src => "http://www.gravatar.com/avatar/#{dev['gravatar_id']}?s=40"}
-          = dev['name']
-
-  %div.span4.columns
-    %ul
-      - @members[(size/3 + 1)..(2 * size/3)].each do |dev|
-        %li.members
-          %a{:href => "https://github.com/#{dev['login']}"}
-            %img{:src => "http://www.gravatar.com/avatar/#{dev['gravatar_id']}?s=40"}
-          = dev['name']
-
-  %div.span4.columns
-    %ul
-      - @members[(2 * size/3 + 1)..-1].each do |dev|
-        %li.members
-          %a{:href => "https://github.com/#{dev['login']}"}
-            %img{:src => "http://www.gravatar.com/avatar/#{dev['gravatar_id']}?s=40"}
-          = dev['name']
